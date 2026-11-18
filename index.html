@@ -47,14 +47,47 @@ h1,h2,h3,p{margin:0;font-weight:400}
 .lista li{padding:2px 0}
 .contacto{font-size:18px}
 .pie{margin-top:128px;font-size:13px;color:#b0b0b0}
+.pie-menu{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:12px}
+.pie-menu a{color:#8a8a8a}
+.pie-menu a:hover{color:#111}
 @media(max-width:900px){.perritos{grid-template-columns:repeat(2,1fr);gap:48px 20px}.hoja{grid-template-columns:1fr;gap:40px}.hoja-foto{position:static}.cabecera{margin-bottom:64px}}
 @media(max-width:520px){.sitio{padding:32px 20px 72px}.intro h1{font-size:34px}.hoja-nombre{font-size:40px}.datos li{grid-template-columns:120px 1fr}}
+.menu{display:flex;flex-wrap:wrap;gap:28px;font-size:14px;color:#8a8a8a}
+.menu a:hover{color:#111}
+.entradas{display:flex;flex-direction:column;gap:80px}
+.entrada{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.entrada-foto img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f6f6f6;transition:opacity .2s}
+.entrada-foto:hover img{opacity:.85}
+.entrada-categoria{display:inline-block;font-size:13px;color:#8a8a8a;letter-spacing:.02em}
+.entrada-titulo{font-size:30px;line-height:1.12;letter-spacing:-.02em;font-weight:700;margin-top:10px}
+.entrada-resumen{font-size:17px;color:#6b6b6b;margin-top:14px;max-width:520px}
+.entrada-leer{display:inline-block;margin-top:18px;font-size:14px;font-weight:700}
+.entrada-leer:hover,.entrada-titulo a:hover,a.entrada-categoria:hover{opacity:.6}
+.articulo{max-width:760px;margin:0 auto}
+.articulo-cabeza h1{font-size:48px;line-height:1.05;letter-spacing:-.03em;font-weight:700;margin-top:12px}
+.articulo-cabeza p{font-size:20px;color:#6b6b6b;margin-top:20px}
+.articulo-imagen{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f6f6f6;margin:56px 0}
+.texto{font-size:18px;line-height:1.7}
+.texto p{margin:0 0 22px}
+.texto h2{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:44px 0 14px}
+.texto a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.entrada{grid-template-columns:1fr;gap:24px}.cabecera{flex-direction:column;gap:16px}}
+@media(max-width:520px){.articulo-cabeza h1{font-size:34px}.entrada-titulo{font-size:24px}}
 </style></head>
 <body>
   <main class="sitio">
   <header class="cabecera">
-    <a class="marca" href="https://stronglifythemes.github.io">Hojas de vida</a>
-  </header>
+  <a class="marca" href="./">Hojas de vida</a>
+  <nav class="menu" aria-label="Principal">
+    
+    <a href="./">Perritos</a>
+    
+    <a href="./blog">Blog</a>
+    
+    <a href="./about">Sobre nosotros</a>
+    
+  </nav>
+</header>
   <section class="intro">
     <h1>Perritos con hoja de vida</h1>
     <p>Diecinueve chihuahuas, cada uno con su corte y su oficio. Elige uno y lee su hoja de vida.</p>
@@ -63,7 +96,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./tobias">
-        <img src="https://media.stronglify.com/295/01-1795016344.jpg" alt="Tobías" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/01-1795017881.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Tobías</h2>
         <p>Mullet</p>
       </a>
@@ -71,7 +104,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./brayan">
-        <img src="https://media.stronglify.com/295/02-1795016345.jpg" alt="Brayan" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/02-1795017884.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Brayan</h2>
         <p>Buzz cut con fade</p>
       </a>
@@ -79,7 +112,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./yuli">
-        <img src="https://media.stronglify.com/295/04-1795016347.jpg" alt="Yuli" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/04-1795017887.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Yuli</h2>
         <p>Trenzas cosidas</p>
       </a>
@@ -87,7 +120,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./don-ernesto">
-        <img src="https://media.stronglify.com/295/05-1795016348.jpg" alt="Don Ernesto" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/05-1795017889.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Don Ernesto</h2>
         <p>Pompadour</p>
       </a>
@@ -95,7 +128,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./rocio">
-        <img src="https://media.stronglify.com/295/06-1795016349.jpg" alt="Rocío" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/06-1795017893.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Rocío</h2>
         <p>Rizos setenteros</p>
       </a>
@@ -103,7 +136,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./punki">
-        <img src="https://media.stronglify.com/295/07-1795016351.jpg" alt="Punki" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/07-1795017895.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Punki</h2>
         <p>Mohicano</p>
       </a>
@@ -111,7 +144,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./marcelo">
-        <img src="https://media.stronglify.com/295/08-1795016353.jpg" alt="Marcelo" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/08-1795017899.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Marcelo</h2>
         <p>Afro</p>
       </a>
@@ -119,7 +152,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./valeria">
-        <img src="https://media.stronglify.com/295/09-1795016354.jpg" alt="Valeria" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/09-1795017904.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Valeria</h2>
         <p>Melena lisa</p>
       </a>
@@ -127,7 +160,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./samuel">
-        <img src="https://media.stronglify.com/295/10-1795016357.jpg" alt="Samuel" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/10-1795017908.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Samuel</h2>
         <p>Man bun con undercut</p>
       </a>
@@ -135,7 +168,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./kevin">
-        <img src="https://media.stronglify.com/295/11-1795016358.jpg" alt="Kevin" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/11-1795017911.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Kevin</h2>
         <p>Taper con raya</p>
       </a>
@@ -143,7 +176,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./ziggy">
-        <img src="https://media.stronglify.com/295/12-1795016360.jpg" alt="Ziggy" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/12-1795017914.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Ziggy</h2>
         <p>Dreadlocks</p>
       </a>
@@ -151,7 +184,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./camila">
-        <img src="https://media.stronglify.com/295/13-1795016361.jpg" alt="Camila" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/13-1795017917.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Camila</h2>
         <p>Bob rubio</p>
       </a>
@@ -159,7 +192,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./jhon">
-        <img src="https://media.stronglify.com/295/14-1795016362.jpg" alt="Jhon" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/14-1795017920.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Jhon</h2>
         <p>Flat top</p>
       </a>
@@ -167,7 +200,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./andres">
-        <img src="https://media.stronglify.com/295/15-1795016365.jpg" alt="Andrés" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/15-1795017923.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Andrés</h2>
         <p>Side part clásico</p>
       </a>
@@ -175,7 +208,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./lorenzo">
-        <img src="https://media.stronglify.com/295/16-1795016367.jpg" alt="Lorenzo" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/16-1795017926.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Lorenzo</h2>
         <p>Shag</p>
       </a>
@@ -183,7 +216,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./nico">
-        <img src="https://media.stronglify.com/295/17-1795016370.jpg" alt="Nico" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/17-1795017928.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Nico</h2>
         <p>Puntas decoloradas</p>
       </a>
@@ -191,7 +224,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./ivan">
-        <img src="https://media.stronglify.com/295/18-1795016371.jpg" alt="Iván" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/18-1795017931.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Iván</h2>
         <p>Buzz platinado</p>
       </a>
@@ -199,7 +232,7 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./lucas">
-        <img src="https://media.stronglify.com/295/19-1795016373.jpg" alt="Lucas" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/19-1795017934.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Lucas</h2>
         <p>Wolf cut</p>
       </a>
@@ -207,13 +240,24 @@ h1,h2,h3,p{margin:0;font-weight:400}
     
     <li>
       <a class="perrito" href="./elvis">
-        <img src="https://media.stronglify.com/295/20-1795016376.jpg" alt="Elvis" loading="lazy"/>
+        <img src="https://media.stronglify.com/295/20-1795017936.jpg" alt="Retrato del perrito" loading="lazy"/>
         <h2>Elvis</h2>
         <p>Tupé rockabilly</p>
       </a>
     </li>
     
   </ul>
-  <footer class="pie">Hojas de vida · perritos con estilo</footer>
+  <footer class="pie">
+  <nav class="pie-menu" aria-label="Pie">
+    
+    <a href="./">Perritos</a>
+    
+    <a href="./blog">Blog</a>
+    
+    <a href="./about">Sobre nosotros</a>
+    
+  </nav>
+  <p>Hojas de vida · perritos con estilo</p>
+</footer>
 </main>
 </body></html>

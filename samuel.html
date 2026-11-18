@@ -48,18 +48,50 @@ h1,h2,h3,p{margin:0;font-weight:400}
 .lista li{padding:2px 0}
 .contacto{font-size:18px}
 .pie{margin-top:128px;font-size:13px;color:#b0b0b0}
+.pie-menu{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:12px}
+.pie-menu a{color:#8a8a8a}
+.pie-menu a:hover{color:#111}
 @media(max-width:900px){.perritos{grid-template-columns:repeat(2,1fr);gap:48px 20px}.hoja{grid-template-columns:1fr;gap:40px}.hoja-foto{position:static}.cabecera{margin-bottom:64px}}
 @media(max-width:520px){.sitio{padding:32px 20px 72px}.intro h1{font-size:34px}.hoja-nombre{font-size:40px}.datos li{grid-template-columns:120px 1fr}}
+.menu{display:flex;flex-wrap:wrap;gap:28px;font-size:14px;color:#8a8a8a}
+.menu a:hover{color:#111}
+.entradas{display:flex;flex-direction:column;gap:80px}
+.entrada{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.entrada-foto img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f6f6f6;transition:opacity .2s}
+.entrada-foto:hover img{opacity:.85}
+.entrada-categoria{display:inline-block;font-size:13px;color:#8a8a8a;letter-spacing:.02em}
+.entrada-titulo{font-size:30px;line-height:1.12;letter-spacing:-.02em;font-weight:700;margin-top:10px}
+.entrada-resumen{font-size:17px;color:#6b6b6b;margin-top:14px;max-width:520px}
+.entrada-leer{display:inline-block;margin-top:18px;font-size:14px;font-weight:700}
+.entrada-leer:hover,.entrada-titulo a:hover,a.entrada-categoria:hover{opacity:.6}
+.articulo{max-width:760px;margin:0 auto}
+.articulo-cabeza h1{font-size:48px;line-height:1.05;letter-spacing:-.03em;font-weight:700;margin-top:12px}
+.articulo-cabeza p{font-size:20px;color:#6b6b6b;margin-top:20px}
+.articulo-imagen{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f6f6f6;margin:56px 0}
+.texto{font-size:18px;line-height:1.7}
+.texto p{margin:0 0 22px}
+.texto h2{font-size:24px;font-weight:700;letter-spacing:-.02em;margin:44px 0 14px}
+.texto a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.entrada{grid-template-columns:1fr;gap:24px}.cabecera{flex-direction:column;gap:16px}}
+@media(max-width:520px){.articulo-cabeza h1{font-size:34px}.entrada-titulo{font-size:24px}}
 </style></head>
 <body>
   <main class="sitio">
   <header class="cabecera">
-    <a class="marca" href="https://stronglifythemes.github.io">Hojas de vida</a>
-    <a class="volver" href="https://stronglifythemes.github.io">Todos los perritos</a>
-  </header>
+  <a class="marca" href="./">Hojas de vida</a>
+  <nav class="menu" aria-label="Principal">
+    
+    <a href="./">Perritos</a>
+    
+    <a href="./blog">Blog</a>
+    
+    <a href="./about">Sobre nosotros</a>
+    
+  </nav>
+</header>
   <article class="hoja">
     <figure class="hoja-foto" style="margin:0">
-      <img src="https://media.stronglify.com/295/10-1795015783.jpg" alt="Samuel">
+      <img src="https://media.stronglify.com/295/10-1795017908.jpg" alt="Retrato del perrito">
     </figure>
     <div>
       <h1 class="hoja-nombre">Samuel</h1>
@@ -117,6 +149,17 @@ h1,h2,h3,p{margin:0;font-weight:400}
       </section>
     </div>
   </article>
-  <footer class="pie">Hojas de vida · perritos con estilo</footer>
+  <footer class="pie">
+  <nav class="pie-menu" aria-label="Pie">
+    
+    <a href="./">Perritos</a>
+    
+    <a href="./blog">Blog</a>
+    
+    <a href="./about">Sobre nosotros</a>
+    
+  </nav>
+  <p>Hojas de vida · perritos con estilo</p>
+</footer>
 </main></body>
 </html>
